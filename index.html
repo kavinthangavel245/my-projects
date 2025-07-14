@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile & Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    nav {
+      background-color: #4a90e2;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    /* Submenu */
+    nav li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #357ab7;
+      min-width: 150px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      border-radius: 4px;
+    }
+    nav li:hover ul {
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    nav li ul li {
+      padding: 0.5rem 1rem;
+    }
+    nav li ul li a {
+      color: #fff;
+      display: block;
+    }
+    nav li ul li a:hover {
+      background-color: #2d5f91;
+    }
+    /* Profile section */
+    .profile {
+      max-width: 800px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid #4a90e2;
+    }
+    .profile h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      color: #4a90e2;
+    }
+    .profile p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Projects</a>
+        <ul>
+          <li><a href="todo-app/">Todo app</a></li>
+          <li><a href="weather-app/">Weather app</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="profile">
+    <img src="assets/myphoto.jpeg" alt="Profile Image">
+    <h2>Your Name</h2>
+    <p>Hello! I'm a passionate developer who loves to create clean and interactive web applications. Welcome to my portfolio site where you can explore my projects and get in touch!</p>
+  </section>
+</body>
+</html>
