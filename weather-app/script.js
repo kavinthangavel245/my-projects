@@ -5,7 +5,7 @@ function getWeather() {
         alert('please enter a city');
         return;
     }
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
     fetch(currentWeatherUrl)
         .then(response => response.json())
