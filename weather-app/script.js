@@ -43,12 +43,15 @@ function displayWeather(data) {
     tempDivInfo.innerHTML = '';
 
 
-    if (data.cod === '404') {
-        weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
+    if (!data || data.cod === '404') {
+        weatherInfoDiv.innerHTML = `<p>City not found. Try another.</p>`;
+        tempDivInfo.innerHTML = '';
+        weatherIcon.style.display = 'none';
+        return;
 
     } else {
         const cityName = data.name;
-        const temperature = Math.round(data.main.temp - 273.15);
+        const temperature = Math.round(data.main.temp);
         const description = data.weather[0].description;
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;

@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial',sans-serif;
+  font-family: 'poppins',sans-serif;
   background: linear-gradient(to right,#5c8186,hsl(180, 89%, 51%));
   text-align: center;
   padding: 20px;
@@ -73,6 +73,7 @@ button:hover {
     margin-top: 10px;
     margin-bottom: none;
     display: none;
+    transition: opacity 0.3s ease;
 }
 
 #hourly-forecast {
@@ -85,15 +86,15 @@ button:hover {
 }
 
 .hourly-item {
-    .hourly-item {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 10px;
-};
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  background: linear-gradient(to top, #01171d, #ffffff);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 
 .hourly-item img {
     width: 30px;
@@ -105,4 +106,18 @@ button:hover {
 #hourly-heading {
     color: #fff;
     margin-top: 10px;
+}
+@media (max-width: 500px) {
+  #weather-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  #hourly-forecast {
+    flex-wrap: wrap;
+  }
 }
